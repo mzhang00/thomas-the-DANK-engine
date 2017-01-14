@@ -1,8 +1,9 @@
 
-package org.usfirst.frc.team694.robot;
+package edu.stuy;
 
-import org.usfirst.frc.team694.robot.subsystems.Thomas;
-
+import edu.stuy.robot.OI;
+import edu.stuy.robot.subsystems.Acquirer;
+import edu.stuy.robot.subsystems.Drivetrain;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -20,7 +21,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Robot extends IterativeRobot {
 
-	public static final Thomas thomas = new Thomas();
+	public static final Drivetrain drivetrain = new Drivetrain();
+	public static final Acquirer acquirer = new Acquirer();
 	public static OI oi;
 
 	Command autonomousCommand;

@@ -1,4 +1,4 @@
-package org.usfirst.frc.team694.robot;
+package edu.stuy.robot;
 
 import org.usfirst.frc.team694.util.Gamepad;
 
@@ -8,7 +8,7 @@ import org.usfirst.frc.team694.util.Gamepad;
  */
 public class OI {
 	
-	public Gamepad gamepad = new Gamepad(RobotMap.GAMEPAD); 	
+	public Gamepad gamepad = new Gamepad(RobotMap.GAMEPAD);
 	
 	
 	//// CREATING BUTTONS
