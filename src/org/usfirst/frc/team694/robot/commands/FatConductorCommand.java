@@ -1,8 +1,7 @@
 package org.usfirst.frc.team694.robot.commands;
 
 import org.usfirst.frc.team694.robot.Robot;
-import org.usfirst.frc.team694.robot.RobotMap;
-import org.usfirst.frc.team694.util.Gamepad;
+import org.usfirst.frc.team694.robot.subsystems.Thomas;
 
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -20,11 +19,12 @@ public class FatConductorCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	double rightWheel = Robot.oi.gaypad.getRightY();
-    	double leftWheel = Robot.oi.gaypad.getLeftY();
+    	double rightWheel = Robot.oi.gamepad.getRightY();
+    	double leftWheel = Robot.oi.gamepad.getLeftY();
     	System.out.println(rightWheel);
-    	System.out.println(leftWheel);							
+    	System.out.println(leftWheel);
     	
+        Robot.thomas.tankDrive(leftWheel,rightWheel);
     }
   
     // Make this return true when this Command no longer needs to run execute()

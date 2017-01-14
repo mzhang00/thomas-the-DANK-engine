@@ -7,7 +7,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Thomas extends Subsystem {
 
-	TalonSRX leftMotor;
+    TalonSRX leftMotor;
 	TalonSRX rightMotor;
 	
 	public Thomas(){
@@ -17,12 +17,17 @@ public class Thomas extends Subsystem {
 
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-	public void tankDrive (float left, float right){
+	public void tankDrive (double left, double right){
 		leftMotor.set(left); //Did you just assume the orientation of the Robot?
 		rightMotor.set(right);
+		}
+
+	public void tankStop()
+	{
+	   tankDrive(0,0);
 	}
+	
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
     }
 }
-

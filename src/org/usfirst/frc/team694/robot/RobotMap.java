@@ -13,6 +13,6 @@ public class RobotMap {
 	public static final int LEFT_MOTOR = 1;
 	public static final int RIGHT_MOTOR = 2;
 
-	public static final int BOTTOM_ROLLER = 3;
-	public static final int TOP_ROLLER = 4;
+	/* public static final int BOTTOM_ROLLER = 3;
+	public static final int TOP_ROLLER = 4; */
 }

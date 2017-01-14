@@ -8,7 +8,7 @@ import org.usfirst.frc.team694.util.Gamepad;
  */
 public class OI {
 	
-	public Gamepad gaypad = new Gamepad(RobotMap.GAMEPAD); 	
+	public Gamepad gamepad = new Gamepad(RobotMap.GAMEPAD); 	
 	
 	
 	//// CREATING BUTTONS
