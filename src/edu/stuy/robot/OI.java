@@ -2,15 +2,26 @@ package edu.stuy.robot;
 
 import org.usfirst.frc.team694.util.Gamepad;
 
+import edu.stuy.robot.commands.AcquirerAcquireCommand;
+import edu.stuy.robot.commands.AcquirerDeacquireCommand;
+import edu.stuy.robot.commands.AcquirerStopCommand;
+
+
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
-	
+    
 	public Gamepad gamepad = new Gamepad(RobotMap.GAMEPAD);
 	
-	
+	public OI() {
+	    gamepad.getLeftBumper().whileHeld(new AcquirerAcquireCommand());
+	    gamepad.getRightBumper().whileHeld(new AcquirerDeacquireCommand());
+	    gamepad.getLeftBumper().whenReleased(new AcquirerStopCommand());
+	    gamepad.getRightBumper().whenReleased(new AcquirerStopCommand());
+	    
+	}
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a
 	//// joystick.

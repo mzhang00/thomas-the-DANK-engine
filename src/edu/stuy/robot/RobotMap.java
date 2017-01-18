@@ -20,4 +20,9 @@ public class RobotMap {
 	// Digital ports
 	public static final int LEFT_ACQUIRER =   5;
 	public static final int RIGHT_ACQUIRER =  6;
+	
+	// Solenoid ports
+	public static final int GRABBER_SOLENOID_OPEN =  1;
+	public static final int GRABBER_SOLENOID_CLOSE = 2;
+    
 }

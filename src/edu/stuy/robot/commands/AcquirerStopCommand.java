@@ -1,31 +1,27 @@
 package edu.stuy.robot.commands;
 
 import edu.stuy.Robot;
-import edu.stuy.robot.subsystems.Drivetrain;
 import edu.wpi.first.wpilibj.command.Command;
 
-public class DrivetrainControlCommand extends Command {
-	
-    public DrivetrainControlCommand() {
+/**
+ *
+ */
+public class AcquirerStopCommand extends Command {
+
+    public AcquirerStopCommand() {
         // Use requires() here to declare subsystem dependencies
-        requires(Robot.drivetrain);
+        requires(Robot.acquirer);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	
+        Robot.acquirer.acquire(0.0, 0.0);
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	double rightWheel = 0.25 * Robot.oi.gamepad.getRightY();
-    	double leftWheel =  0.25 * Robot.oi.gamepad.getLeftY();
-    	System.out.println(rightWheel);
-    	System.out.println(leftWheel);
-    	
-        Robot.drivetrain.tankDrive(leftWheel,rightWheel);//this is a method
     }
-  
+
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
         return false;

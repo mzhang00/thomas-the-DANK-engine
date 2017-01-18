@@ -23,7 +23,7 @@ public class Drivetrain extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 	public void tankDrive (double left, double right){
-		frontLeftMotor.set(left); //Did you just assume the orientation of the Robot?
+		frontLeftMotor.set(left);
 		backLeftMotor.set(left);
 		frontRightMotor.set(-1.0 * right);
 		backRightMotor.set(-1.0 * right);

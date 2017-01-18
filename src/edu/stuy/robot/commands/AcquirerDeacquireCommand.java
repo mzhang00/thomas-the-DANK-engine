@@ -6,46 +6,31 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class AcquirerControlCommand extends Command {
+public class AcquirerDeacquireCommand extends Command {
 
-    public AcquirerControlCommand() {
+    public AcquirerDeacquireCommand() {
         // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
         requires(Robot.acquirer);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-
+        
+        Robot.acquirer.acquire(1.0, -1.0);
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        double rightAcquirer = 0.0;
-        double leftAcquirer = 0.0;
-        
-        if (Robot.oi.gamepad.getRawRightTrigger()) {
-            rightAcquirer = -1.0;
-            leftAcquirer = 1.0;
-        }
-        if (Robot.oi.gamepad.getRawLeftTrigger()) {
-            rightAcquirer = 1.0;
-            leftAcquirer = -1.0;
-        }
-        
-        System.out.println("rightA: " + rightAcquirer);
-        System.out.println("leftA: " + leftAcquirer);
-
-        Robot.acquirer.acquire(leftAcquirer, rightAcquirer);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        return true;
     }
 
     // Called once after isFinished returns true
     protected void end() {
+        
     }
 
     // Called when another command which requires one or more of the same

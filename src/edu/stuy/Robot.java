@@ -25,7 +25,7 @@ public class Robot extends IterativeRobot {
 	public static final Acquirer acquirer = new Acquirer();
 	public static OI oi;
 
-	Command autonomousCommand;
+	Command autonomousCommand; 
 	SendableChooser chooser = new SendableChooser();
 
 	/**
