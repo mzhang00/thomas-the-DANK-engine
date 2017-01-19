@@ -3,6 +3,7 @@ package edu.stuy;
 
 import edu.stuy.robot.OI;
 import edu.stuy.robot.subsystems.Acquirer;
+import edu.stuy.robot.subsystems.Grabber;
 import edu.stuy.robot.subsystems.Drivetrain;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
@@ -23,6 +24,7 @@ public class Robot extends IterativeRobot {
 
 	public static final Drivetrain drivetrain = new Drivetrain();
 	public static final Acquirer acquirer = new Acquirer();
+	public static final Grabber arms = new Grabber();
 	public static OI oi;
 
 	Command autonomousCommand; 

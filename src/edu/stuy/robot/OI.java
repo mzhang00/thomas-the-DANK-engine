@@ -5,6 +5,7 @@ import org.usfirst.frc.team694.util.Gamepad;
 import edu.stuy.robot.commands.AcquirerAcquireCommand;
 import edu.stuy.robot.commands.AcquirerDeacquireCommand;
 import edu.stuy.robot.commands.AcquirerStopCommand;
+import edu.stuy.robot.commands.ArmToggleCommand;
 
 
 /**
@@ -20,7 +21,11 @@ public class OI {
 	    gamepad.getRightBumper().whileHeld(new AcquirerDeacquireCommand());
 	    gamepad.getLeftBumper().whenReleased(new AcquirerStopCommand());
 	    gamepad.getRightBumper().whenReleased(new AcquirerStopCommand());
+
+	    gamepad.getBottomButton().whenPressed( new ArmToggleCommand() );//Open and close top grabber
 	    
+	    gamepad.getLeftButton().whenPressed( new ArmToggleCommand() );//Used for toggling the state
+
 	}
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a

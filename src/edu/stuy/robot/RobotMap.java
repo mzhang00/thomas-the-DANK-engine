@@ -22,7 +22,18 @@ public class RobotMap {
 	public static final int RIGHT_ACQUIRER =  6;
 	
 	// Solenoid ports
+    public static final int ARM_SOLENOID_SHORT_OPEN = 3;
+    public static final int ARM_SOLENOID_SHORT_CLOSE = 2;
+    public static final int ARM_SOLENOID_LONG_OPEN = 0;
+    public static final int ARM_SOLENOID_LONG_CLOSE = 1;
+	
 	public static final int GRABBER_SOLENOID_OPEN =  1;
 	public static final int GRABBER_SOLENOID_CLOSE = 2;
+	
+	//Solenoid channels
+	public static final int PCM_1 = 0;
+	public static final int PCM_2 = 1;
+	
+	
     
 }
